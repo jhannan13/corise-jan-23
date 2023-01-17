@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_postgres__orders
+    description: all orders, all the time!
+    columns:
+      - name: order_guid
+        description: unique identifier for an order
+      - name: order_user_guid
+        description: user identifer related to who placed the order
+      - name: order_cost
+        description: cost of the order less shipping
+      - name: order_shipping_cost
+        description: shipping cost of the order
+      - name: order_total_cost
+        description: total order cost
+      - name: order_status
+        description: status of an order (shipped, delivered, preparing)
+      - name: order_promo_desc
+        description: custom promo description
+      - name: order_created_at_utc
+        description: timestamp (utc) when the order was created
+      - name: order_estimated_delivery_at_utc
+        description: estimated delivery timestamp (utc)
+      - name: order_delivered_at_utc
+        description: timestamp at which the order was delivered to a customer (utc)

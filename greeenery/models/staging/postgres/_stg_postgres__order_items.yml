@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_postgres__order_items
+    description: items within a distinct order from our greenery platform
+    columns:
+      - name: order_item_order_guid
+        description: the associated order for each ordered item
+      - name: order_item_product_guid
+        description: the associated product item related to the order item
+      - name: order_items_unique_id
+        description: surrogate key on order and product to test uniqueness
+        tests:
+          - unique
+          - not_null
+      - name: order_item_quantity
+        description: number of products ordered for a specific product and order

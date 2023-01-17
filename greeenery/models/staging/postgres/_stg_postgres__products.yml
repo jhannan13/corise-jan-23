@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_postgres__products
+    description: indivdual products we sell on greenery with related list price 
+      and on hand inventory
+    columns:
+      - name: product_guid
+        description: unique identifier for a product
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: name of the product sold
+      - name: product_price
+        description: pre-promo standard price of the related product
+      - name: product_inventory
+        description: on hand inventory

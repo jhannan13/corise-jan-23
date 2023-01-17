@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_postgres__users
+    description: user data related to our postgres greenery database
+    columns:
+      - name: user_guid
+        description: the unique identifier for a user
+        tests:
+          - unique
+          - not_null
+      - name: user_first_name
+        description: first name of the user
+      - name: user_last_name
+        description: last name of the user
+      - name: user_email
+        description: email associated with the user
+      - name: user_phone_number
+        description: phone number associated with the user
+      - name: user_created_at_utc
+        description: utc timestamp when the user was created in our platform
+        tests:
+          - not_null
+      - name: user_updated_at_utc
+        description: the timestamp at which a user was updated (could be an email change)
+      - name: address_guid
+        description: address identifer related to the user
+        tests:
+          - not_null

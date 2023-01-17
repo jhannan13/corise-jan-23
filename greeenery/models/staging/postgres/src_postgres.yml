@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: postgres
+    database: raw
+    schema: public
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    tables:
+      - name: users 
+        loaded_at_field: created_at
+        description: >
+          Contains demographic information about each user
+      - name: addresses 
+      - name: orders
+        loaded_at_field: created_at
+      - name: promos 
+      - name: order_items 
+      - name: products 
+      - name: events 
+        loaded_at_field: created_at

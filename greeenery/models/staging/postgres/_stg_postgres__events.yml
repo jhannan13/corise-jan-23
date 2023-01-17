@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_postgres__events
+    description: events from our greenery platform, these events are immutable
+    columns:
+      - name: event_guid
+        description: unique identifier for the individual event
+      - name: event_session_guid
+        description: a grouping of events based on their time on the platform — 
+          a session represents a grouping of events and is useful to understand the
+          customer journey
+      - name: event_user_guid
+        description: unique identifer for the user
+      - name: event_type
+        description: the type of action recorded on the platform based on the events
+          our software eng team emits
+      - name: event_page_url
+        description: url associated to the action for the event
+      - name: event_created_at_utc
+        description: timestamp at which the event took place
+      - name: event_order_guid
+        description: if the event has an order associated with it, this would be populated
+      - name: event_product_guid
+        description: similar to order_guid, if the event has a product associated, this would populate

@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_postgres__addresses
+    description: staging model of our addresses table from postgres, featuring
+      address related information for a user on the greenery platform
+    columns:
+      - name: address_guid
+        description: unique identifer for an address
+        tests:
+          - unique
+          - not_null
+      - name: address_street_address
+        description: house / apartment number + street name
+      - name: address_zip_code
+        description: five digit zip
+      - name: address_state
+        description: full state name (no abbreviations!)
+      - name: address_country
+        description: country associated to the address

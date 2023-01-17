@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_postgres__promos
+    description: promotions ran by Jake and the product team
+    columns:
+      - name: promo_desc
+        description: unique identifier and the description (this should be better!)
+        tests:
+          - unique
+          - not_null
+      - name: promo_discount
+        description: discount being applied
+      - name: promo_status
+        description: active/inactive
+      - name: promo_is_active
+        description: boolean whether or not the promo is active currently
