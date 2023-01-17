@@ -1,8 +1,5 @@
-# Analytics engineering with dbt
+## Helper Project for corise jan 23
 
-Template repository for the projects and environment of the course: Analytics engineering with dbt
+check out the `greeenery` directory for relevant code. we'll update this repo each week of the course!
 
-> Please note that this sets some environment variables so if you create some new terminals please load them again.
-
-## License
-GPL-3.0
+as always, feel free to reach out in slack if you're stuck!
