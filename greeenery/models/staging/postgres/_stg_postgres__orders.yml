@@ -6,16 +6,28 @@ models:
     columns:
       - name: order_guid
         description: unique identifier for an order
+        tests:
+          - not_null
+          - unique
+        meta:
+          field_type: marketing
       - name: order_user_guid
         description: user identifer related to who placed the order
+        meta:
+          field_type: marketing
       - name: order_cost
         description: cost of the order less shipping
+        meta:
+          field_type: marketing
       - name: order_shipping_cost
         description: shipping cost of the order
       - name: order_total_cost
         description: total order cost
       - name: order_status
         description: status of an order (shipped, delivered, preparing)
+        tests:
+          - accepted_values:
+              values: ['shipped', 'delivered', 'preparing']
       - name: order_promo_desc
         description: custom promo description
       - name: order_created_at_utc

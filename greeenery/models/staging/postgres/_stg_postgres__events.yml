@@ -6,6 +6,8 @@ models:
     columns:
       - name: event_guid
         description: unique identifier for the individual event
+        tests:
+          - unique
       - name: event_session_guid
         description: a grouping of events based on their time on the platform — 
           a session represents a grouping of events and is useful to understand the
