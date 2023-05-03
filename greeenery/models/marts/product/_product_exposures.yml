@@ -1,0 +1,16 @@
+version: 2
+
+exposures:  
+  - name: product funnel
+    type: dashboard
+    maturity: medium
+    url: https://app.sigmacomputing.com/corise-dbt/workbook/Product-Funnel-1tDkD07CJqlmf5oohaqxQS
+    tags: ['product']
+    description: >
+      all of the datas
+    depends_on:
+      - ref('fct_user_sessions')
+      - ref('int_session_events_agg')
+    owner:
+      name: Jake
+      email: jake.hannan@sigmacomputing.com

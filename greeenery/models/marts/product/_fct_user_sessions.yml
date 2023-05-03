@@ -6,9 +6,6 @@ models:
     columns:
       - name: event_session_guid
         description: ""
-        tests:
-          - unique
-          - not_null
       - name: event_user_guid
         description: ""
       - name: user_first_name

@@ -1,6 +1,7 @@
 {{
   config(
     materialized = 'table'
+    , post_hook = "grant select on {{ this }} to role cpo_role"
   )
 }}
 
